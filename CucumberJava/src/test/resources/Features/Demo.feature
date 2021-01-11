@@ -1,3 +1,4 @@
+@smoketest
 Feature: Demo Feature to print statements
 
 Scenario: Login to the website

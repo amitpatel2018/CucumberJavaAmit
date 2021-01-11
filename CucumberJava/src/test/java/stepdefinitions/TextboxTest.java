@@ -32,21 +32,21 @@ public class TextboxTest {
 	public void user_clicks_on_textbox() {
 	    driver.findElement(By.xpath("//li[@id='item-0']//span[@class='text']")).click();
 	}
-	@And("user enters fullName")
-	public void user_enters_full_name() {
-	    driver.findElement(By.id("userName")).sendKeys("John Paul");
+	@And("^user enters fullName as (.*)$")
+	public void user_enters_full_name(String fullName) {
+	    driver.findElement(By.id("userName")).sendKeys(fullName);
 	}
-	@And("user enters email address")
-	public void user_enters_email_address() {
-	    driver.findElement(By.id("userEmail")).sendKeys("johnpaul123@gmail.com");
+	@And("^user enters email address as (.*)$")
+	public void user_enters_email_address(String emailAddress) {
+	    driver.findElement(By.id("userEmail")).sendKeys(emailAddress);
 	}
-	@And("user enters current address")
-	public void user_enters_current_address() {
-	    driver.findElement(By.id("currentAddress")).sendKeys("some address");
+	@And("^user enters current address as (.*)$")
+	public void user_enters_current_address(String cAddress) {
+	    driver.findElement(By.id("currentAddress")).sendKeys(cAddress);
 	}
-	@And("user enters permanent address")
-	public void user_enters_permanent_address() {
-	    driver.findElement(By.id("permanentAddress")).sendKeys("some address");
+	@And("^user enters permanent address as (.*)$")
+	public void user_enters_permanent_address(String pAddress) {
+	    driver.findElement(By.id("permanentAddress")).sendKeys(pAddress);
 	}
 	@When("user clicks on Submit")
 	public void user_clicks_on_submit() {
